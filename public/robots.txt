@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /createproduct
+Disallow: /createorder
+Disallow: /dashboard
+Disallow: /orders
+
+Allow: /
+
+# Sitemap location (adjust with your actual sitemap URL)
+Sitemap: https://yourwebsite.com/sitemap.xml
