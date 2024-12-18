@@ -3,8 +3,9 @@ import { createOrder } from "../actions/userActions"
 import { useSearchParams } from "next/navigation"
 import { toast, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import { Suspense } from "react";
 
-export default function CreateOrder() {
+function CreateOrder() {
     const searchParams = useSearchParams()
     const productName = searchParams.get("productname")
     const productPrice = searchParams.get("productprice")
@@ -104,4 +105,12 @@ export default function CreateOrder() {
             <ToastContainer />
         </>
     )
+}
+
+export default function Page(){
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+          <CreateOrder />
+        </Suspense>
+      );
 }
