@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="QcPl4bXfK6XNYpN23ibDkEPFzmObIL58-6dhQ-_yqPU" />
+        <meta name="google-site-verification" content="FVG369IH--kKq7CaH9FBIKR7WMoc5JXL1fwjKGiDBLE" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-white text-black font-sans`}
