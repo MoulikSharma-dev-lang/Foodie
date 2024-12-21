@@ -35,6 +35,7 @@ export async function POST(request) {
 export async function DELETE(request) {
     const cookieStore = await cookies()
     try {
+        connectDb()
         const token = cookieStore.get("token")
         const verifiedToken = jwt.verify(token.value, process.env.JWT_SECRET)
         await User.findOneAndDelete(verifiedToken.email)
